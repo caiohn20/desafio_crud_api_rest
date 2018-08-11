@@ -22,8 +22,8 @@ public class ConexaoMySQL {
      * Os atributos usuario e senha representam usuario e senha do 
      * SGBD a ser usado na conexão
      */
-    private static final String usuario = "root";
-    private static final String senha = "Ch9joKz1n0";  
+    private static final String usuario = "";
+    private static final String senha = "";  
     /**
      * O atributo con representa um objeto que 
      * contém a conexão com o banco de dados em si
