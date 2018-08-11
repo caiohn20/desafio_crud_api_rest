@@ -1,5 +1,9 @@
+As configurações feitas no projeto utilizaram as configurações padrões de conexão com o banco MySql.
+
+
+
 //CRIAÇÃO DO BANCO----------------------------------------------------------------------------------------------------------------
-Executar o arquivo db_estrutura.sql que esta dentro da pasta bd.
+Executar no banco de dados, o arquivo db_estrutura.sql que esta dentro da pasta bd.
 
 Caso necessário também é possível executar o arquivo db_dados.sql que contém alguns registros de teste.
 
@@ -7,8 +11,6 @@ Caso necessário também é possível executar o arquivo db_dados.sql que conté
 
 
 //INSTRUÇÃO PARA CONECTAR NO BANCO------------------------------------------------------------------------------------------------
-
-As configurações feitas no projeto utilizaram as configurações padrões de conexão com o banco MySql.
 
 Acessar o arquivo ConexaoMySQL.java e alterar as variáveis "usuario" e "senha".
 Na variável "usuario" colocar o nome de usuário que fará o acesso ao banco de dados.
