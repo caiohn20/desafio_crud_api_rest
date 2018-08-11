@@ -39,7 +39,7 @@ public class UserResource {
         u.setId(id);
 
         UserDao dao = new UserDao();
-        u = dao.buscar(u);
+        u = dao.search(u);
 
         //Converter para Gson
         Gson g = new Gson();
@@ -48,34 +48,34 @@ public class UserResource {
 
     @DELETE
     @Path("excluir/{id}")
-    public String excluir(@PathParam("id") Long id) {
+    public String delete(@PathParam("id") Long id) {
 
         User u = new User();
         u.setId(id);
 
         UserDao dao = new UserDao();
-        u = dao.buscar(u);
+        u = dao.search(u);
 
-        return dao.excluir(u);
+        return dao.remove(u);
 
     }
 
     @POST
     @Consumes({"application/json"})
     @Path("inserir")
-    public String inserir(String content) {
+    public String insert(String content) {
         Gson g = new Gson();       
         User u = (User) g.fromJson(content, User.class);
         
         UserDao dao = new UserDao();
-        return dao.inserir(u);
+        return dao.insert(u);
         
     }
     
     @PATCH
     @Consumes({"application/json"})
     @Path("alterar/{id}")
-    public String alterar(@PathParam("id") Long id, String content) {
+    public String update(@PathParam("id") Long id, String content) {
         
         User u = new User();
         u.setId(id);
@@ -85,7 +85,7 @@ public class UserResource {
         Gson g = new Gson();       
         User usuario = (User) g.fromJson(content, User.class);
 
-        return dao.alterar(id, usuario);
+        return dao.update(id, usuario);
         
     }
     

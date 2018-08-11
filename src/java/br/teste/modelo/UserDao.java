@@ -13,12 +13,12 @@ public class UserDao {
     public UserDao() {
     }
 
-    public String excluir(User user) {
+    public String remove(User user) {
 
         String sql = "DELETE FROM user where id=?";
         Boolean status = false;
         String msg = "";
-        Retorno ret = new Retorno();
+        Response ret = new Response();
         String name = user.getName();
 
         PreparedStatement pst = ConexaoMySQL.getPreparedStatement(sql);
@@ -48,9 +48,9 @@ public class UserDao {
         return json;
     }
 
-    public String inserir(User user) {
+    public String insert(User user) {
 
-        Retorno ret = new Retorno();
+        Response ret = new Response();
         String sql = "INSERT INTO user(name,login,pass) VALUES (?,?,?)";
         Boolean status = false;
         PreparedStatement pst = ConexaoMySQL.getPreparedStatement(sql);
@@ -83,7 +83,7 @@ public class UserDao {
         return json;
     }
 
-    public User buscar(User user) {
+    public User search(User user) {
         String sql = "SELECT * FROM user where id=?";
         User retorno = null;
 
@@ -131,9 +131,9 @@ public class UserDao {
         return retorno;
     }
 
-    public String alterar(Long id, User user) {
+    public String update(Long id, User user) {
 
-        Retorno ret = new Retorno();
+        Response ret = new Response();
         String sql = "UPDATE user set name = ?, login = ? , pass = ? where id = ?";
         Boolean status = false;
         PreparedStatement pst = ConexaoMySQL.getPreparedStatement(sql);
