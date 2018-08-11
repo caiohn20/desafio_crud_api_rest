@@ -35,7 +35,7 @@ POST = /webresources/user/inserir
 
 GET = /webresources/user/buscar/{id}
 
-PATCH = webresources/user/alterar/{id}
+PATCH = /webresources/user/alterar/{id}
 {
 	"name": "Nome Completo do Usuário",
     "login": "Email do Usuário",
